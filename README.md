@@ -1,10 +1,10 @@
-# hcDMR_caller
+# hcDMR caller
 
-## What is hcDMR_caller?
+## What is hcDMR caller?
 
-* hcDMR_caller is for calling high confidence DMRs by comparing with multiple controls. For details, see Ref. [1].
+* hcDMR caller is for calling high confidence DMRs by comparing with multiple controls. For details, see Ref. [1].
 
-## Run hcDMR_caller
+## Run hcDMR caller
 
 1) Step 1 - generate methratio file from aligned bam file:
 
@@ -30,7 +30,7 @@ BSmap2cytosine.pl
 Example usage:
 perl BSmap2cytosine.pl --input_file output_methratio.txt --reference_cytosine TAIR10_v2.cytosine.gz
 
-# This step will output a output_methratio.cytosine.gz file
+This step will output a output_methratio.cytosine.gz file
 
 3) Step 3 - Bin the genome into 100bp bins.
 
@@ -43,7 +43,7 @@ Cytosine_2_100bp.pl
 Example usage:
 perl Cytosine_2_100bp.pl output_methratio.cytosine.gz
 
-# This step will output three 100bi bin files containing methylation level along the genome:
+This step will output three 100bi bin files containing methylation level along the genome:
 
 a output_methratio.cytosine.gz file
 
