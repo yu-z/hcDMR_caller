@@ -2,6 +2,22 @@
 use Getopt::Long;
 use Data::Dumper;
 
+# take the list of commands as input and run through qsub
+############# qsub parameter ################
+$PM =
+'#!/bin/sh
+#$ -cwd 
+#$ -m a
+#$ -V
+#$ -S /bin/bash
+#$ -l h_data=4G,h_rt=23:55:00
+# -pe shared 4
+';
+
+$job_split = 10;
+
+
+
 #################### open folder contains all input files#################
 my $USAGE = "\nUSAGE: multiple_DMR_WTvsMUTANT.pl 
                                    -seqdir DMR_folder
@@ -10,7 +26,7 @@ my $USAGE = "\nUSAGE: multiple_DMR_WTvsMUTANT.pl
                                    -Rscript selection scripts for comparision 
                                    ";
 my $options = {};
-GetOptions($options, "-seqdir=s", "-wtlist=s", "-mulist=s", "Rscript=s"); #, "-out=s" 
+GetOptions($options, "-seqdir=s", "-wtlist=s", "-mulist=s"); #, "-out=s" 
 die $USAGE unless defined ($options->{seqdir});
 die $USAGE unless defined ($options->{wtlist});
 die $USAGE unless defined ($options->{mulist});
@@ -92,13 +108,31 @@ while (my $current = shift @name_array) {
         $n1++;
         $n2++;
         $count_command++;
-
-    		system("$user_input  $current $remain $seqdir");
-
+        $command = "$command" . 
+    "$user_input  $current $remain $seqdir\n";
+    # print "$n1\n";
+    if ($count_command % $job_split == 0){
+        print "$command\n";
+        open(SH, ">DMR\_$current\_$remain\_DMR.sh");
+        print SH "$PM";
+        print SH "$command\n";
+        system "qsub DMR\_$current\_$remain\_DMR.sh\n";
+        close SH;
+        system "rm DMR\_$current\_$remain\_DMR.sh";    
+        $command = "";
+        }
     }
 }
-system("$user_input  $current $remain $seqdir");
+print "$command";
+# die;
+open(SH, ">DMR\_$current\_$remain\_DMR.sh");
+print SH "$PM";
+print SH "$command\n";
+system "qsub DMR\_$current\_$remain\_DMR.sh\n";
+close SH;
+system "rm DMR\_$current\_$remain\_DMR.sh";    
 
 
+print "total: $n1\n";
 
 
