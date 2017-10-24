@@ -1,0 +1,51 @@
+hcDMR calling Pipeline
+
+1) Step 1 - generate methratio file from your aligned bam file:
+
+required files:
+input_file_name.bam # WGBS mapped read file
+UCSCgenome.fa # can be downloaded at xxx eg http://www.arabidopsis.org
+
+required scripts:
+methratio_alt.py
+
+example usage:
+python methratio_alt.py -u -z -r -S -o output_methratio.txt -d UCSCgenome.fa input_WGBS.bam
+
+2) Step 2 - count the C and CT count at every position in the genome
+
+required files:
+output_methratio.txt # output from methratio_alt.py script
+TAIR10_v2.cytosine.gz # can be found xxx
+
+input scripts:
+BSmap2cytosine.pl
+
+example usage:
+perl BSmap2cytosine.pl --input_file output_methratio.txt --reference_cytosine TAIR10_v2.cytosine.gz
+
+# This step will output a XXX_cytosine.gz file
+
+3) Step 3 - Bin the genome into 100bp bins.
+
+required files:
+XXX_cytosine.gz
+
+required scripts:
+Cytosine_2_100bp.pl
+
+example usage:
+perl Cytosine_2_100bp.pl XXX_cytosine.gz
+
+4) Step 4 - Call hcDMRs against 54 WT dataset:
+
+required files:
+100bp processed WGBS file
+All_WT_54_libs # processed 54 WT libraries, available at XXX
+
+required scripts:
+multiple_DMR_WTvsMUTANT.pl
+
+Example usage:
+perl multiple_DMR_WTvsMUTANT.pl --input_file test.txt --reference_file All_WT_54_libs.txt --output_file hcDMRs.txt
+
