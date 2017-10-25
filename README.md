@@ -31,7 +31,7 @@
 * BSmap_to_cytosine.pl
 
 ##### Example usage:
-* perl BSmap_to_cytosine.pl --input_file input_file_name.gz --reference_cytosine input_file_name.cytosine.gz
+* perl BSmap_to_cytosine.pl --input_file input_file_name.gz --reference_cytosine TAIR10_v2.cytosine.gz
 
 ##### This step will output a C and CT count file: input_file_name.cytosine.gz
 
@@ -44,7 +44,7 @@
 * Cytosine_to_100bp.pl
 
 ##### Example usage:
-* perl Cytosine_to_100bp.pl output_methratio.cytosine.gz
+* perl Cytosine_to_100bp.pl input_file_name.cytosine.gz
 
 ##### This step will output three files (types of CHH, CHG, CG methylation) containing methylation level along the genome in 100bp bin:
 * input_file_name.CHH.100.gz
