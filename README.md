@@ -38,7 +38,7 @@ This step will output a C and CT count file: input_file_name.cytosine.gz
 3) Step 3 - Bin the genome into 100bp bins.
 
 Required files:
-output_methratio.cytosine.gz #output from BSmap2cytosine.pl
+input_file_name.cytosine.gz #output from BSmap2cytosine.pl
 
 Required scripts:
 Cytosine_2_100bp.pl
@@ -51,38 +51,33 @@ input_file_name.CHH.100.gz
 input_file_name.CHG.100.gz
 input_file_name.CG.100.gz
 
-
-
-
-
-
-
-
-
-
------------------------------------------------------------------------------
 4) Step 4 - Call hcDMRs against 54 WT dataset:
 
 required files:
-
-A folder containing 100bp bin files (DMR_folder), including: 
-Three 100bp processed WGBS files #output from Cytosin_2_100bp.pl
-All_WT_54_libs # processed 54 WT libraries, which can be found in the folder /Reference. 
-
-54WT.list # a list containing library names of 54 WT controls, which can be found in the folder /Reference. 
-MU.list # a list containing library names of test, format same as 54WT.list, making by the usr, for example
-
-input_file_name
+100bp bin files from step 3:
+input_file_name.CHH.100.gz
+input_file_name.CHG.100.gz
+input_file_name.CG.100.gz
+54 WT dataset: # can be found in the folder /Reference
+CHH.100.54WT.Ref.txt.gz
+CHG.100.54WT.Ref.txt.gz
+CG.100.54WT.Ref.txt.gz
 
 required scripts:
-multiple_DMR_WTvsMUTANT.pl
-DMRFtest_Allchr_commnad.R (comparing using Fisher exact test) or DMR_Allchr_commnad_noFtest.R (comparing without test)
+hcDMR_caller.pl
 
 Example usage:
-perl multiple_DMR_WTvsMUTANT.pl -seqdir DMR_folder -wtlist 54WT.list -mulist MU.list -Rscript DMR_Allchr_commnad_noFtest.R
-                                   
-Generating A folder containing the comparision file: 
+CHH DMR: 
+perl hcDMR_caller.pl -ref CHH.100.54WT.Ref.txt.gz -input input_file_name.CHH.100.gz -dif 0.1 -n 33
+CHG DMR:
+perl hcDMR_caller.pl -ref CHH.100.54WT.Ref.txt.gz -input input_file_name.CHG.100.gz -dif 0.2 -n 33
+CG DMR:
+perl hcDMR_caller.pl -ref CHH.100.54WT.Ref.txt.gz -input input_file_name.CG.100.gz -dif 0.4 -n 33
 
+This step will generate three DMR list files:
+input_file_name.CHH.DMR
+input_file_name.CHG.DMR
+input_file_name.CG.DMR
 
 ## Feedbacks:
 
