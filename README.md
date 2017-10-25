@@ -72,7 +72,7 @@
 
 ## Feedbacks:
 
-You can e-mail (zhangy9@sustc.edu.cn) if you find errors in the manual or bugs in the source code, or have any suggestions/questions about the manual and code. Thank you!
+You can create an issue if you find errors in the manual or bugs in the source code, or have any suggestions/questions about the manual and code. Thank you!
 
 ## Citations & Acknowlegement
 
