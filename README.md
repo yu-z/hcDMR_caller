@@ -54,14 +54,8 @@
 ### Step 4 - Call hcDMRs against 54 WT dataset:
 
 ##### required files:
-* 100bp bin files from step 3:
-* input_file_name.CHH.100.gz
-* input_file_name.CHG.100.gz
-* input_file_name.CG.100.gz
-* 54 WT dataset: *can be found in the folder /Reference*
-* CHH.100.54WT.Ref.txt.gz
-* CHG.100.54WT.Ref.txt.gz
-* CG.100.54WT.Ref.txt.gz
+* 100bp bin files: input_file_name.CHH.100.gz input_file_name.CHG.100.gz input_file_name.CG.100.gz
+* 54 WT dataset: CHH.100.54WT.Ref.txt.gz CHG.100.54WT.Ref.txt.gz CG.100.54WT.Ref.txt.gz *can be found in the folder /Reference*
 
 ##### required scripts:
 * hcDMR_caller.pl
@@ -78,13 +72,12 @@
 
 ## Feedbacks:
 
-You can e-mail (XXXXX) if you find errors in the manual or bugs in the source code, or have any suggestions/questions about the manual and code. Thank you!
+You can e-mail (zhangy9@sustc.edu.cn) if you find errors in the manual or bugs in the source code, or have any suggestions/questions about the manual and code. Thank you!
 
-## Citations & Ackgnowlegement
+## Citations & Acknowlegement
 
-XXX
+We thank Christopher J Hale for modifying methratio.py from BSMP and generating TAIR10_v2.cytosine.gz. 
 
 If you use MOD in your published work, we kindly ask you to cite the following paper which describes the central algorithms used in MOD:
-* [1] xxx
-
+* [1] Large-scale comparative epigenomics reveals hierarchical regulation of non-CG methylation in Arabidopsis. 2017. XXX
 
