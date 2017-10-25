@@ -1,3 +1,6 @@
 TAIR10_v2.cytosine.gz filter=lfs diff=lfs merge=lfs -text
 Ath_ChrAll.fa filter=lfs diff=lfs merge=lfs -text
 All_WT_54_libs.tar.gz filter=lfs diff=lfs merge=lfs -text
+CG.100.54WT.Ref.txt.gz filter=lfs diff=lfs merge=lfs -text
+CHH.100.54WT.Ref.txt.gz filter=lfs diff=lfs merge=lfs -text
+CHG.100.54WT.Ref.txt.gz filter=lfs diff=lfs merge=lfs -text
