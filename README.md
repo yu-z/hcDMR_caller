@@ -16,7 +16,7 @@
 ##### Required scripts:
 * methratio_alt.py *This scirpt was from Package of BSMAP, generating methratio file*
 
-##### example usage:
+##### Example usage:
 * python methratio_alt.py --Steve --ref=Ath_ChrAll.fa --out=input_file_name -u -z -r input_file_name.bam
 
 ##### This step will output a methratio file: input_file_name.gz
@@ -53,11 +53,11 @@
 
 ### Step 4 - Call hcDMRs against 54 WT dataset:
 
-##### required files:
+##### Required files:
 * 100bp bin files: input_file_name.CHH.100.gz input_file_name.CHG.100.gz input_file_name.CG.100.gz
 * 54 WT dataset: CHH.100.54WT.Ref.txt.gz CHG.100.54WT.Ref.txt.gz CG.100.54WT.Ref.txt.gz *can be found in the folder /Reference*
 
-##### required scripts:
+##### Required scripts:
 * hcDMR_caller.pl
 
 ##### Example usage:
