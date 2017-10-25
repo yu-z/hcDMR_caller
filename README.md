@@ -6,26 +6,26 @@
 
 ## Run hcDMR caller
 
-1) Step 1 - generate methratio file from aligned bam file:
+### Step 1 - generate methratio file from aligned bam file:
 
-Required files:
+* Required files:
 
-input_file_name.bam # WGBS mapped read file
-Ath_ChrAll.fa # It is a fasta file of A. thaliana genome (TAIR10), which can be found in the folder /Reference
+input_file_name.bam *WGBS mapped read file*
+Ath_ChrAll.fa *It is a fasta file of A. thaliana genome (TAIR10), which can be found in the folder /Reference*
 
 Required scripts:
-methratio_alt.py #This scirpt was from Package of BSMAP, generating methratio file. 
+methratio_alt.py *This scirpt was from Package of BSMAP, generating methratio file*
 
 example usage:
 python methratio_alt.py --Steve --ref=Ath_ChrAll.fa --out=input_file_name -u -z -r input_file_name.bam
 
 This step will output a methratio file: input_file_name.gz
 
-2) Step 2 - count the C and CT count at every position in the genome
+* Step 2 - count the C and CT count at every position in the genome
 
 Required files:
-input_file_name.gz # output from methratio_alt.py script
-TAIR10_v2.cytosine.gz # can be found in the folder /Reference
+input_file_name.gz *output from methratio_alt.py script*
+TAIR10_v2.cytosine.gz *can be found in the folder /Reference*
 
 Input scripts:
 BSmap2cytosine.pl
@@ -35,10 +35,10 @@ perl BSmap2cytosine.pl --input_file input_file_name.gz --reference_cytosine inpu
 
 This step will output a C and CT count file: input_file_name.cytosine.gz
 
-3) Step 3 - Bin the genome into 100bp bins.
+* Step 3 - Bin the genome into 100bp bins.
 
 Required files:
-input_file_name.cytosine.gz #output from BSmap2cytosine.pl
+input_file_name.cytosine.gz *output from BSmap2cytosine.pl*
 
 Required scripts:
 Cytosine_2_100bp.pl
@@ -51,14 +51,14 @@ input_file_name.CHH.100.gz
 input_file_name.CHG.100.gz
 input_file_name.CG.100.gz
 
-4) Step 4 - Call hcDMRs against 54 WT dataset:
+* Step 4 - Call hcDMRs against 54 WT dataset:
 
 required files:
 100bp bin files from step 3:
 input_file_name.CHH.100.gz
 input_file_name.CHG.100.gz
 input_file_name.CG.100.gz
-54 WT dataset: # can be found in the folder /Reference
+54 WT dataset: *can be found in the folder /Reference*
 CHH.100.54WT.Ref.txt.gz
 CHG.100.54WT.Ref.txt.gz
 CG.100.54WT.Ref.txt.gz
