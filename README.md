@@ -48,22 +48,21 @@
 
 ##### This step will output three files (types of CHH, CHG, CG methylation) containing methylation level along the genome in 100bp bin:
 * input_file_name.CHH.100.gz
-* input_file_name.CHG.100.gz
-* input_file_name.CG.100.gz
+* input_file_name.CHG.100.gz* input_file_name.CG.100.gz
 
 ### Step 4 - Call hcDMRs against 54 WT dataset:
 
 ##### Required files:
 * 100bp bin files: input_file_name.CHH.100.gz input_file_name.CHG.100.gz input_file_name.CG.100.gz
-* 54 WT dataset: CHH.100.54WT.Ref.txt.gz CHG.100.54WT.Ref.txt.gz CG.100.54WT.Ref.txt.gz *can be found in the folder /Reference*
+* 54 WT dataset: CHH.100.54WT.Ref.gz CHG.100.54WT.Ref.gz CG.100.54WT.Ref.gz *can be found in the folder /Reference*
 
 ##### Required scripts:
 * hcDMR_caller.pl
 
 ##### Example usage:
-* CHH DMR: perl hcDMR_caller.pl -ref CHH.100.54WT.Ref.txt.gz -input input_file_name.CHH.100.gz -dif 0.1 -n 33
-* CHG DMR: perl hcDMR_caller.pl -ref CHG.100.54WT.Ref.txt.gz -input input_file_name.CHG.100.gz -dif 0.2 -n 33
-* CG DMR: perl hcDMR_caller.pl -ref CG.100.54WT.Ref.txt.gz -input input_file_name.CG.100.gz -dif 0.4 -n 33
+* CHH DMR: perl hcDMR_caller.pl -ref CHH.100.54WT.Ref.gz -input input_file_name.CHH.100.gz -dif 0.1 -n 33
+* CHG DMR: perl hcDMR_caller.pl -ref CHG.100.54WT.Ref.gz -input input_file_name.CHG.100.gz -dif 0.2 -n 33
+* CG DMR: perl hcDMR_caller.pl -ref CG.100.54WT.Ref.gz -input input_file_name.CG.100.gz -dif 0.4 -n 33
 
 ##### This step will generate three DMR list files:
 * input_file_name.CHH.DMR
@@ -88,8 +87,6 @@
 * input_file_name.CHH.FET.DMR
 * input_file_name.CHG.FET.DMR
 * input_file_name.CG.FET.DMR
-
-### We have a exmple.gz in the folder /Reference, which you can test the pipeline from the second step.
 
 ## Feedbacks:
 
