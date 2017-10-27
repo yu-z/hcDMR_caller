@@ -48,7 +48,7 @@
 
 ##### This step will output three files (types of CHH, CHG, CG methylation) containing methylation level along the genome in 100bp bin:
 * input_file_name.CHH.100.gz
-* input_file_name.CHG.100.gz* input_file_name.CG.100.gz
+* input_file_name.CHG.100.gz input_file_name.CG.100.gz
 
 ### Step 4 - Call hcDMRs against 54 WT dataset:
 
