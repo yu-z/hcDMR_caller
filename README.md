@@ -62,8 +62,8 @@
 
 ##### Example usage:
 * CHH DMR: perl hcDMR_caller.pl -ref CHH.100.54WT.Ref.txt.gz -input input_file_name.CHH.100.gz -dif 0.1 -n 33
-* CHG DMR: perl hcDMR_caller.pl -ref CHH.100.54WT.Ref.txt.gz -input input_file_name.CHG.100.gz -dif 0.2 -n 33
-* CG DMR: perl hcDMR_caller.pl -ref CHH.100.54WT.Ref.txt.gz -input input_file_name.CG.100.gz -dif 0.4 -n 33
+* CHG DMR: perl hcDMR_caller.pl -ref CHG.100.54WT.Ref.txt.gz -input input_file_name.CHG.100.gz -dif 0.2 -n 33
+* CG DMR: perl hcDMR_caller.pl -ref CG.100.54WT.Ref.txt.gz -input input_file_name.CG.100.gz -dif 0.4 -n 33
 
 ##### This step will generate three DMR list files:
 * input_file_name.CHH.DMR
@@ -80,9 +80,9 @@
 * hcDMR_caller_FET.pl
 
 ##### Example usage:
-* CHH DMR: perl hcDMR_caller_FET.pl -ref CHH.100.54WT.Ref.txt.gz -input input_file_name.CHH.100.gz -dif 0.1 -n 33 -p 0.01
-* CHG DMR: perl hcDMR_caller_FET.pl -ref CHH.100.54WT.Ref.txt.gz -input input_file_name.CHG.100.gz -dif 0.2 -n 33 -p 0.01
-* CG DMR: perl hcDMR_caller_FET.pl -ref CHH.100.54WT.Ref.txt.gz -input input_file_name.CG.100.gz -dif 0.4 -n 33 -p 0.01
+* CHH DMR: perl hcDMR_caller_FET.pl -ref CHH.100.54WT.FET.Ref.gz -input input_file_name.CHH.100.gz -dif 0.1 -n 33 -p 0.01
+* CHG DMR: perl hcDMR_caller_FET.pl -ref CHG.100.54WT.FET.Ref.gz -input input_file_name.CHG.100.gz -dif 0.2 -n 33 -p 0.01
+* CG DMR: perl hcDMR_caller_FET.pl -ref CG.100.54WT.FET.Ref.gz -input input_file_name.CG.100.gz -dif 0.4 -n 33 -p 0.01
 
 ##### This step will generate three DMR list files:
 * input_file_name.CHH.FET.DMR
