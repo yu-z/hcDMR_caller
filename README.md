@@ -70,6 +70,25 @@
 * input_file_name.CHG.DMR
 * input_file_name.CG.DMR
 
+##### For this step, you can use Fisher exact test during the comparision between test library and WT controls, but it will increase the computational time greatly:
+
+##### Required files:
+* 100bp bin files: input_file_name.CHH.100.gz input_file_name.CHG.100.gz input_file_name.CG.100.gz
+* 54 WT dataset: CHH.100.54WT.FET.Ref.gz CHG.100.54WT.FET.Ref.gz CG.100.54WT.FET.Ref.gz *can be found in the folder /Reference*
+
+##### Required scripts:
+* hcDMR_caller_FET.pl
+
+##### Example usage:
+* CHH DMR: perl hcDMR_caller_FET.pl -ref CHH.100.54WT.Ref.txt.gz -input input_file_name.CHH.100.gz -dif 0.1 -n 33 -p 0.01
+* CHG DMR: perl hcDMR_caller_FET.pl -ref CHH.100.54WT.Ref.txt.gz -input input_file_name.CHG.100.gz -dif 0.2 -n 33 -p 0.01
+* CG DMR: perl hcDMR_caller_FET.pl -ref CHH.100.54WT.Ref.txt.gz -input input_file_name.CG.100.gz -dif 0.4 -n 33 -p 0.01
+
+##### This step will generate three DMR list files:
+* input_file_name.CHH.FET.DMR
+* input_file_name.CHG.FET.DMR
+* input_file_name.CG.FET.DMR
+
 ## Feedbacks:
 
 You can create an issue if you find errors in the manual or bugs in the source code, or have any suggestions/questions about the manual and code. Thank you!
