@@ -89,6 +89,8 @@
 * input_file_name.CHG.FET.DMR
 * input_file_name.CG.FET.DMR
 
+### We have a exmple.gz in the folder /Reference, which you can test the pipeline from the second step.
+
 ## Feedbacks:
 
 You can create an issue if you find errors in the manual or bugs in the source code, or have any suggestions/questions about the manual and code. Thank you!
