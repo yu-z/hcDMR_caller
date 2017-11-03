@@ -7,10 +7,10 @@ use Data::Dumper;
 
 #################### open folder contains all input files#################
 my $USAGE = "\nUSAGE: hcDMR_caller.pl 
-                                   -ref 
-                                   -input Reference
-                                   -dif
-                                   -n
+                                   -ref *.gz Reference of multiple WTs
+                                   -input *.gz 100bin file of interesting library
+                                   -dif 0.1 for CHH, 0.2 for CHG, 0.4 for CHH
+                                   -n minimum number of supporting libraries for each bin
                                    ";
 my $options = {};
 GetOptions($options, "-ref=s", "-input=s", "-dif=s", "-n=s"); #, "-out=s" 
