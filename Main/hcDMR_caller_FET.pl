@@ -11,6 +11,11 @@ my $USAGE = "\nUSAGE: hcDMR_caller_FET.pl
                                    -dif
                                    -n
                                    -p_fet
+                                   -ref *.gz Reference of multiple WTs
+                                   -input *.gz 100bin file of interesting library
+                                   -dif 0.1 for CHH, 0.2 for CHG, 0.4 for CHH
+                                   -n minimum number of supporting libraries for each bin
+                                   -p_fet p_value cutoff for Fisher exact test
                                    ";
 my $options = {};
 GetOptions($options, "-ref=s", "-input=s", "-dif=s", "-n=s", "-p_fet=s"); 
