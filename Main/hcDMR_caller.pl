@@ -12,6 +12,7 @@ my $USAGE = "\nUSAGE: hcDMR_caller.pl
                                    -dif 0.1 for CHH, 0.2 for CHG, 0.4 for CHH
                                    -n minimum number of supporting libraries for each bin
                                    ";
+				   
 my $options = {};
 GetOptions($options, "-ref=s", "-input=s", "-dif=s", "-n=s"); #, "-out=s" 
 die $USAGE unless defined ($options->{ref});
