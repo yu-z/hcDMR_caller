@@ -6,7 +6,7 @@
 
 ## Download hcDMR
 
-You can download all the scripts from above link /main. The /reference files can be download from googledrive: https://drive.google.com/open?id=12gNDSECm289dTL2ys6AA8SzB88drmMhW 
+You can download all the scripts from above link /main. The /reference files can be downloaded from googledrive: https://drive.google.com/open?id=12gNDSECm289dTL2ys6AA8SzB88drmMhW 
 
 ## Run hcDMR caller
 
