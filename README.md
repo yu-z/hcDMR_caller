@@ -4,6 +4,10 @@
 
 * hcDMR caller is for calling high confidence DMRs by comparing with multiple controls using whole genome bisulfite sequencing data. For details, see Ref. [1].
 
+## Download hcDMR
+
+You can download all the scripts from above link /main. The /reference files can be download from googledrive: https://drive.google.com/open?id=12gNDSECm289dTL2ys6AA8SzB88drmMhW 
+
 ## Run hcDMR caller
 
 ### Step 1 - generate methratio file from aligned bam file:
