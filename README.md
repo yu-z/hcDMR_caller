@@ -21,8 +21,9 @@ You can download all the scripts from above link /main. The /reference files can
 * methratio_alt.py *This scirpt was from Package of BSMAP, generating methratio file*
 
 ##### Example usage:
-* python methratio_alt.py --Steve --ref=Ath_ChrAll.fa --out=input_file_name -u -z -r input_file_name.bam
-
+```
+python methratio_alt.py --Steve --ref=Ath_ChrAll.fa --out=input_file_name -u -z -r input_file_name.bam
+```
 ##### This step will output a methratio file: input_file_name.gz
 
 ### Step 2 - count the C and CT count at every position in the genome
