@@ -36,8 +36,9 @@ python methratio_alt.py --Steve --ref=Ath_ChrAll.fa --out=input_file_name -u -z 
 * BSmap_to_cytosine.pl
 
 ##### Example usage:
-* perl BSmap_to_cytosine.pl --input_file input_file_name.gz --reference_cytosine TAIR10_v2.cytosine.gz
-
+```
+perl BSmap_to_cytosine.pl --input_file input_file_name.gz --reference_cytosine TAIR10_v2.cytosine.gz
+```
 ##### This step will output a C and CT count file: input_file_name.cytosine.gz
 
 ### Step 3 - Bin the genome into 100bp bins.
@@ -49,8 +50,9 @@ python methratio_alt.py --Steve --ref=Ath_ChrAll.fa --out=input_file_name -u -z 
 * Cytosine_to_100bp.pl
 
 ##### Example usage:
-* perl Cytosine_to_100bp.pl input_file_name.cytosine.gz
-
+```
+perl Cytosine_to_100bp.pl input_file_name.cytosine.gz
+```
 ##### This step will output three files (types of CHH, CHG, CG methylation) containing methylation level along the genome in 100bp bin:
 * input_file_name.CHH.100.gz
 * input_file_name.CHG.100.gz input_file_name.CG.100.gz
@@ -65,10 +67,18 @@ python methratio_alt.py --Steve --ref=Ath_ChrAll.fa --out=input_file_name -u -z 
 * hcDMR_caller.pl
 
 ##### Example usage:
-* CHH DMR: perl hcDMR_caller.pl -ref CHH.100.54WT.Ref.gz -input input_file_name.CHH.100.gz -dif 0.1 -n 33
-* CHG DMR: perl hcDMR_caller.pl -ref CHG.100.54WT.Ref.gz -input input_file_name.CHG.100.gz -dif 0.2 -n 33
-* CG DMR: perl hcDMR_caller.pl -ref CG.100.54WT.Ref.gz -input input_file_name.CG.100.gz -dif 0.4 -n 33
-
+* CHH DMR: 
+```
+perl hcDMR_caller.pl -ref CHH.100.54WT.Ref.gz -input input_file_name.CHH.100.gz -dif 0.1 -n 33
+```
+* CHG DMR: 
+```
+perl hcDMR_caller.pl -ref CHG.100.54WT.Ref.gz -input input_file_name.CHG.100.gz -dif 0.2 -n 33
+```
+* CG DMR: 
+```
+perl hcDMR_caller.pl -ref CG.100.54WT.Ref.gz -input input_file_name.CG.100.gz -dif 0.4 -n 33
+```
 ##### This step will generate three DMR list files:
 * input_file_name.CHH.DMR
 * input_file_name.CHG.DMR
@@ -84,10 +94,18 @@ python methratio_alt.py --Steve --ref=Ath_ChrAll.fa --out=input_file_name -u -z 
 * hcDMR_caller_FET.pl
 
 ##### Example usage:
-* CHH DMR: perl hcDMR_caller_FET.pl -ref CHH.100.54WT.Ref.FET.gz -input input_file_name.CHH.100.gz -dif 0.1 -n 33 -p 0.01
-* CHG DMR: perl hcDMR_caller_FET.pl -ref CHG.100.54WT.Ref.FET.gz -input input_file_name.CHG.100.gz -dif 0.2 -n 33 -p 0.01
-* CG DMR: perl hcDMR_caller_FET.pl -ref CG.100.54WT.Ref.FET.gz -input input_file_name.CG.100.gz -dif 0.4 -n 33 -p 0.01
-
+* CHH DMR: 
+```
+perl hcDMR_caller_FET.pl -ref CHH.100.54WT.Ref.FET.gz -input input_file_name.CHH.100.gz -dif 0.1 -n 33 -p 0.01
+```
+* CHG DMR: 
+```
+perl hcDMR_caller_FET.pl -ref CHG.100.54WT.Ref.FET.gz -input input_file_name.CHG.100.gz -dif 0.2 -n 33 -p 0.01
+```
+* CG DMR: 
+```
+perl hcDMR_caller_FET.pl -ref CG.100.54WT.Ref.FET.gz -input input_file_name.CG.100.gz -dif 0.4 -n 33 -p 0.01
+```
 ##### This step will generate three DMR list files:
 * input_file_name.CHH.FET.DMR
 * input_file_name.CHG.FET.DMR
