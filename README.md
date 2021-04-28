@@ -120,8 +120,7 @@ You can create an issue if you find errors in the manual or bugs in the source c
 We thank Christopher J Hale for modifying methratio.py from BSMAP and generating TAIR10_v2.cytosine.gz. 
 
 If you use hcDMR caller in your published work, we kindly ask you to cite the following paper which describes the central algorithms used in hcDMR caller:
-* [1] Large-scale comparative epigenomics reveals hierarchical regulation of non-CG methylation in Arabidopsis. 2017. XXX
-* [2] BSMAP: whole genome bisulfite sequence MAPping program. BMC Bioinformatics. 2009 Jul 27;10:232.
+* [1] Zhang Y#, Harris J#, Liu Q#, Liu W, Ausin I, Long Y, Xiao L, Feng L, Chen X, Chen X, Zhan L, Feng S, Li J, Wang F, Zhai J, Jacobsen S. Large-scale comparative epigenomics reveals hierarchical regulation of non-CG methylation in Arabidopsis. PNAS. 2018, 115(5):E1069-E1074
 
 
 
